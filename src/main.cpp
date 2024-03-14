@@ -4,6 +4,8 @@
 //Definition des variables et des tableaux contenant les broches utilisées par le programme
 char pinCable1[8] = {A4, A5, A6, 0, 1, 2, 3, 4};
 int pinCable2[8] = {5, 6, 7, 8, 9, 10, 11, 12};
+int responseArrayCable[8];
+CableTester cableTest;
 
 void setup() {
   //Definition des broches en entrées
