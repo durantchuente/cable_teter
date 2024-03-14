@@ -23,7 +23,16 @@ void setup() {
 void loop() {
   int n = 0;
   do {  
-    
+    digitalWrite(pinCable2[n], HIGH); //Envoie du signal élévé aux broches de sortie
+    for (int i = 0;i < 8;i++) {
+      if (digitalRead(pinCable1[i])) //Vérification de l'état du signal des broches d'entrées
+      {
+        responseArrayCable[n] = i; //Affectation des position des broches ayant recu un signagle élévé dans un tableau
+      }
+    }
+    digitalWrite(pinCable2[n], LOW); //Envoie du signal faible aux broches de sortie
+    n = n+1;
   } while (n<8);
-
+  
+  delay(2000);
 }
