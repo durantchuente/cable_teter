@@ -33,6 +33,6 @@ void loop() {
     digitalWrite(pinCable2[n], LOW); //Envoie du signal faible aux broches de sortie
     n = n+1;
   } while (n<8);
-  
+  cableTest.verifyCableType(responseArrayCable, 8); //Appel de la fonction de verification du cable
   delay(2000);
 }
